@@ -1,0 +1,69 @@
+<!--
+    This is the Calculor in JavaScript 
+    Programmed by: Madad Ali
+    Date & Time: 10-01-2020 5:30: PM
+-->
+
+<html>
+<head>
+ <title> Arithematic Operation by Text Input</title> 
+ <link rel="stylesheet" type="text/css" href="stylesheet.css">
+ <script>
+
+ function cal()
+ {
+     var n1=parseInt(document.getElementById('num1').value);
+     var n2=parseInt(document.getElementById('num2').value);
+     var opt=document.getElementById('operator').value;
+
+    if(opt==='+')
+    {
+        document.getElementById('result').value=n1+n2;
+    }
+    
+    if(opt==='-')
+    {
+        document.getElementById('result').value=n1-n2;
+    }
+    
+    if(opt==='/')
+    {
+        document.getElementById('result').value=n1/n2;
+    }
+    
+    if(opt==='*')
+    {
+        document.getElementById('result').value=n1*n2;
+    }
+ }
+ </script>  
+</head>
+<body>
+<fieldset>
+    <legend>Calculator</legend>
+    
+    <label>Enter Number</label>
+ <input type="text" id="num1" maxlength="20"> <br><br>
+
+ <label>Enter number</label>
+ <input type="text" id="num2" maxlength="20" > <br><br>
+ <br>
+ <br>
+ <select  id="operator">
+     <option> Select Operator </option>
+     <option value="+">+</option>
+     <option value="-">-</option>
+     <option value="/">/</option>
+     <option value="*">*</option>
+ </select>
+ <br> 
+ <br>
+ <br>
+
+ <button  onclick="cal();">=</button>
+ <input type="text" id="result">
+
+</fieldset>
+
+</body>
+ </html>   
